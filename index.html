@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dolce Pod Timer — Support &amp; Privacy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Support and privacy policy for the Dolce Pod Timer iOS app.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #ffffff;
+    --surface: #f6f1fc;
+    --surface-line: #ece2fb;
+    --ink: #2b1e4a;
+    --ink-muted: #6b5c8f;
+    --caption: #8c7fae;
+    --accent: #a172fd;
+    --accent-strong: #7c4de0;
+    --accent-soft: #c7aafe;
+    --border: #dbc9fe;
+    --accent-ink: #ffffff;
+    --font-display: 'Sora', ui-sans-serif, system-ui, sans-serif;
+    --font-body: 'Karla', ui-sans-serif, system-ui, sans-serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1a1330;
+      --surface: #241a3d;
+      --surface-line: #33254f;
+      --ink: #f3eeff;
+      --ink-muted: #c3b5e8;
+      --caption: #9c8dc4;
+      --accent: #b98bff;
+      --accent-strong: #cba3ff;
+      --accent-soft: #3a2a5c;
+      --border: #3f2e63;
+      --accent-ink: #1a1330;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #1a1330;
+    --surface: #241a3d;
+    --surface-line: #33254f;
+    --ink: #f3eeff;
+    --ink-muted: #c3b5e8;
+    --caption: #9c8dc4;
+    --accent: #b98bff;
+    --accent-strong: #cba3ff;
+    --accent-soft: #3a2a5c;
+    --border: #3f2e63;
+    --accent-ink: #1a1330;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--accent-strong); text-decoration-thickness: 1.5px; text-underline-offset: 2px; }
+  a:focus-visible, button:focus-visible { outline: 2.5px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px clamp(20px, 5vw, 56px);
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+  .brand svg { width: 26px; height: 26px; flex: none; }
+  .brand-name { font-family: var(--font-display); font-weight: 700; font-size: 16px; letter-spacing: -0.01em; }
+
+  .toplinks { display: flex; gap: 4px; }
+  .toplinks a {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--ink-muted);
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 999px;
+  }
+  .toplinks a:hover { background: var(--surface); color: var(--ink); }
+
+  main { max-width: 700px; margin: 0 auto; padding: clamp(28px, 6vw, 64px) clamp(20px, 5vw, 24px) 100px; }
+
+  section { scroll-margin-top: 84px; }
+  section + section { margin-top: clamp(56px, 10vw, 96px); padding-top: clamp(56px, 10vw, 96px); border-top: 1px solid var(--border); }
+
+  .eyebrow {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-strong);
+    margin: 0 0 10px;
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(32px, 5vw, 42px);
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+    margin: 0 0 14px;
+    text-wrap: balance;
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: -0.01em;
+    margin: 0 0 12px;
+    text-wrap: balance;
+  }
+
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 17px;
+    margin: 28px 0 8px;
+  }
+
+  .lede { font-size: 18px; color: var(--ink-muted); max-width: 54ch; margin: 0 0 8px; }
+  p { margin: 0 0 16px; max-width: 66ch; }
+  p.tight { margin-bottom: 8px; }
+  ul, ol { margin: 0 0 16px; padding-left: 22px; max-width: 62ch; }
+  li { margin-bottom: 8px; }
+  li:last-child { margin-bottom: 0; }
+  strong { font-weight: 600; }
+
+  .meta-line { color: var(--caption); font-size: 14px; margin: 0 0 40px; }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--surface-line);
+    border-radius: 16px;
+    padding: 22px 24px;
+    margin: 24px 0;
+  }
+  .card h4 {
+    font-family: var(--font-display);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent-strong);
+    margin: 0 0 12px;
+  }
+  .card ul { margin-bottom: 0; }
+
+  .glance { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; margin: 24px 0 8px; }
+  .glance-item {
+    background: var(--surface);
+    border: 1px solid var(--surface-line);
+    border-radius: 14px;
+    padding: 16px 18px;
+  }
+  .glance-item .k { font-family: var(--font-display); font-weight: 700; font-size: 15px; margin-bottom: 4px; }
+  .glance-item .v { font-size: 14px; color: var(--ink-muted); line-height: 1.5; }
+
+  details {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 4px 20px;
+    margin-bottom: 12px;
+    background: var(--bg);
+  }
+  details + details { margin-top: 12px; }
+  summary {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 16px;
+    padding: 16px 0;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: '+';
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--accent);
+    flex: none;
+    transition: transform 0.15s ease;
+  }
+  details[open] summary::after { transform: rotate(45deg); }
+  details p, details ul { padding-bottom: 16px; }
+
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+    margin-top: 28px;
+    padding: 20px 24px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-strong) 100%);
+    color: var(--accent-ink);
+  }
+  .contact .t { font-family: var(--font-display); font-weight: 700; font-size: 16px; }
+  .contact .d { font-size: 14px; opacity: 0.92; }
+  .contact a {
+    margin-left: auto;
+    color: var(--accent-ink);
+    background: color-mix(in srgb, var(--accent-ink) 18%, transparent);
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .contact a:hover { background: color-mix(in srgb, var(--accent-ink) 28%, transparent); }
+
+  footer {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 24px clamp(20px, 5vw, 24px) 48px;
+    color: var(--caption);
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 560px) {
+    .toplinks a { padding: 8px 10px; font-size: 13px; }
+    .contact { flex-direction: column; align-items: flex-start; }
+    .contact a { margin-left: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a class="brand" href="#top">
+    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="50" cy="50" r="47" stroke="var(--accent-soft)" stroke-width="5"/>
+      <path d="M50 47a3 3 0 0 1 47 96a3 3 0 0 1 0 6" stroke="var(--accent)" stroke-width="5" stroke-linecap="round" fill="none" transform="translate(-3,-3)"/>
+      <rect x="30" y="34" width="40" height="9" rx="4.5" fill="var(--accent-soft)"/>
+      <rect x="34" y="46" width="32" height="9" rx="4.5" fill="var(--accent)"/>
+      <rect x="38" y="58" width="24" height="9" rx="4.5" fill="var(--accent)"/>
+    </svg>
+    <span class="brand-name">Dolce Pod Timer</span>
+  </a>
+  <nav class="toplinks">
+    <a href="#support">Support</a>
+    <a href="#privacy">Privacy</a>
+  </nav>
+</div>
+
+<main id="top">
+
+<section id="support">
+  <p class="eyebrow">Support</p>
+  <h1>Getting help with Dolce&nbsp;Pod&nbsp;Timer</h1>
+  <p class="lede">Dolce Pod Timer is a one-screen brew timer for Nescafé Dolce Gusto pods — no account, no setup. Most questions are answered below; anything else, email us directly.</p>
+
+  <div class="glance">
+    <div class="glance-item">
+      <div class="k">No sign-in</div>
+      <div class="v">There's no account to reset, recover, or lose access to.</div>
+    </div>
+    <div class="glance-item">
+      <div class="k">No sync</div>
+      <div class="v">Your bar selection resets each time you close the app, by design.</div>
+    </div>
+    <div class="glance-item">
+      <div class="k">One screen</div>
+      <div class="v">Everything the app does lives on the single timer screen.</div>
+    </div>
+  </div>
+
+  <h3>Frequently asked questions</h3>
+
+  <details>
+    <summary>The timer doesn't match how long my machine actually pours</summary>
+    <p>The seven timings in the app were measured directly from a Dolce Gusto machine, bar by bar, rather than calculated from a flat rate. That said, pour time depends on your specific machine's pump and how full the water tank is, so small differences from one machine to the next are expected. Start the timer the moment liquid begins pouring — not when you press the machine's button — for the closest match.</p>
+  </details>
+
+  <details>
+    <summary>Why does the app show ads?</summary>
+    <p>A small banner ad, provided by Google AdMob, is shown beneath the instructions at the top of the screen. It's there to keep the app free with no purchases or subscriptions, and it never covers or interrupts the timer itself. See the <a href="#privacy">Privacy Policy</a> below for what this involves.</p>
+  </details>
+
+  <details>
+    <summary>I found a bug, or the timer stopped working correctly</summary>
+    <p>Sorry about that — please email a short description of what happened, and your device model and iOS version if you have them handy, and we'll take a look.</p>
+  </details>
+
+  <div class="contact">
+    <div>
+      <div class="t">Still need help?</div>
+      <div class="d">We read every email personally.</div>
+    </div>
+    <a href="mailto:adamjw97@outlook.com">adamjw97@outlook.com</a>
+  </div>
+</section>
+
+<section id="privacy">
+  <p class="eyebrow">Privacy Policy</p>
+  <h1>Privacy Policy</h1>
+  <p class="meta-line">Effective August 2026 · Applies to the Dolce Pod Timer iOS app</p>
+
+  <p>Dolce Pod Timer is built to be simple: there's no account, no login, and no data entry of any kind. This page explains the small amount of technical data involved in showing the app's one advertisement, and nothing more — because there isn't anything more to explain.</p>
+
+  <h3>What we collect directly</h3>
+  <p>Nothing. The app doesn't ask for your name, email, location, or any personal information. It doesn't have a backend server, and nothing you do inside the app — which bar count you tap, when you start or stop the timer — is recorded, stored, or sent anywhere by us.</p>
+
+  <h3>Advertising, through Google AdMob</h3>
+  <p>The app shows a single banner ad using Google's AdMob service, which keeps Dolce Pod Timer free. To deliver and measure that ad, AdMob's software may collect technical identifiers from your device — such as your device's advertising identifier, general (non-precise) location inferred from IP address, and basic diagnostic data like crash logs.</p>
+
+  <div class="card">
+    <h4>On iOS specifically</h4>
+    <ul>
+      <li>The app asks for App Tracking Transparency permission shortly after opening, as required by Apple, before this identifier is used for advertising.</li>
+      <li>You can allow or decline this at the prompt, or change your answer later in <strong>Settings → Privacy &amp; Security → Tracking</strong>.</li>
+      <li>Declining doesn't disable or limit the timer in any way — you'll simply see a less personalized ad.</li>
+    </ul>
+  </div>
+
+  <p>This data is collected and processed by Google, not by us — we never see or have access to it ourselves. Google's own privacy policy, linked below, covers how AdMob handles this information.</p>
+
+  <h3>What we don't do</h3>
+  <ul>
+    <li>We don't sell your data, because we don't have any to sell.</li>
+    <li>We don't use any analytics, crash reporting, or tracking tools of our own, beyond what AdMob requires to function.</li>
+    <li>We don't share data with anyone other than Google, as described above.</li>
+  </ul>
+
+  <h3>Children's privacy</h3>
+  <p>Dolce Pod Timer isn't directed at children and isn't designed to collect information from anyone. If you believe a child has provided personal information through the app, contact us and we'll look into it — though as explained above, the app has no mechanism to collect or store personal information in the first place.</p>
+
+  <h3>Changes to this policy</h3>
+  <p>If this policy changes, the update will be posted on this same page with a new effective date above.</p>
+
+  <div class="contact">
+    <div>
+      <div class="t">Questions about this policy?</div>
+      <div class="d">Reach out any time.</div>
+    </div>
+    <a href="mailto:adamjw97@outlook.com">adamjw97@outlook.com</a>
+  </div>
+
+  <p style="margin-top:28px"><a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from AdMob and its partners →</a></p>
+</section>
+
+</main>
+
+<footer>
+  <span>Dolce Pod Timer — Adam Dean</span>
+  <span>Support &amp; Privacy Policy</span>
+</footer>
+
+</body>
+</html>

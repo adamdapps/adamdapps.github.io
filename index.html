@@ -4,92 +4,139 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Plana</title>
-<link rel="icon" href="web/icons/Icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --purple: #6C63FF;
-    --purple-dark: #4B44CC;
-    --text: #1C1B21;
-    --muted: #6B6B76;
-    --bg: #FAFAFD;
-    --card: #FFFFFF;
-    --border: #ECEBF5;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --text: #F1F0FA;
-      --muted: #A9A7BE;
-      --bg: #121016;
-      --card: #1B1922;
-      --border: #2A2733;
-    }
+    --purple: #9C7DFD;
+    --purple-deep: #6C63FF;
+    --text: #F1F0FA;
+    --muted: #A9A7BE;
+    --bg: #121016;
+    --card: #1B1922;
+    --border: #2A2733;
   }
   * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body {
     font-family: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
-    min-height: 100vh;
     color: var(--text);
     background: var(--bg);
+    line-height: 1.65;
+  }
+
+  /* Hero */
+  .hero {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 24px;
-  }
-  .wrap {
-    max-width: 480px;
-    width: 100%;
     text-align: center;
+    padding: 70px 24px 50px;
   }
-  img.icon {
-    width: 92px;
-    height: 92px;
-    border-radius: 22px;
-    box-shadow: 0 8px 24px rgba(108,99,255,0.28);
-    margin-bottom: 20px;
+  img.wordmark {
+    width: 240px;
+    max-width: 70%;
+    height: auto;
+    margin: 0 0 10px;
+    filter: drop-shadow(0 6px 18px rgba(156,125,253,0.35));
   }
-  h1 {
-    font-size: 32px;
-    font-weight: 800;
-    color: var(--purple);
-    letter-spacing: -0.02em;
-    margin: 0 0 8px;
-  }
-  p.tagline {
+  .hero p.tagline {
     color: var(--muted);
     font-size: 16px;
+    max-width: 440px;
     margin: 0 0 32px;
-    line-height: 1.5;
   }
   .links {
     display: flex;
-    flex-direction: column;
     gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 460px;
   }
   .links a {
-    display: block;
     background: var(--card);
     border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 16px 20px;
+    border-radius: 999px;
+    padding: 10px 22px;
     color: var(--text);
     text-decoration: none;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 14px;
     transition: border-color 0.15s ease;
   }
-  .links a:hover {
-    border-color: var(--purple);
+  .links a:hover { border-color: var(--purple); }
+
+  /* Content sections */
+  main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 10px 20px 100px;
   }
-  .links a span.arrow {
+  section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 36px 34px;
+    margin-top: 28px;
+    scroll-margin-top: 24px;
+  }
+  section h2.section-title {
+    font-size: 22px;
+    font-weight: 800;
     color: var(--purple);
-    float: right;
+    margin: 0 0 4px;
   }
+  section .effective-date {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 24px;
+  }
+  h3 {
+    color: var(--purple);
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 26px;
+    margin-bottom: 6px;
+  }
+  p { margin: 8px 0; color: var(--text); }
+  a.inline { color: var(--purple); }
+  .back-to-top {
+    display: inline-block;
+    margin-top: 22px;
+    font-size: 13px;
+    color: var(--muted);
+    text-decoration: none;
+  }
+  .back-to-top:hover { color: var(--purple); }
+
+  .contact-card {
+    background: linear-gradient(135deg, var(--purple-deep), #4B44CC);
+    border: none;
+    border-radius: 16px;
+    padding: 26px 30px;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+  .contact-card h3 { margin: 0 0 6px; color: #fff; }
+  .contact-card a.big { color: #fff; font-weight: 700; font-size: 18px; text-decoration: none; }
+  .contact-card p { margin: 4px 0 0; color: rgba(255,255,255,0.85); font-size: 14px; }
+
+  .faq {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 16px 20px;
+    margin-top: 12px;
+  }
+  .faq h4 { font-size: 14px; font-weight: 700; margin: 0 0 4px; color: var(--text); }
+  .faq p { font-size: 13.5px; color: var(--muted); margin: 0; }
+
   footer {
-    margin-top: 40px;
+    text-align: center;
+    padding: 30px 20px 60px;
     color: var(--muted);
     font-size: 13px;
   }
@@ -98,20 +145,119 @@
 </head>
 <body>
 
-<div class="wrap">
-  <img class="icon" src="web/icons/Icon-192.png" alt="Plana app icon">
-  <h1>Plana</h1>
+<div class="hero" id="top">
+  <img class="wordmark" src="plana-wordmark-white.png" alt="Plana">
   <p class="tagline">Plan weddings and events without the spreadsheet chaos — budget, guest list, seating, timeline and to-dos, all in one place.</p>
-
   <div class="links">
-    <a href="privacy-policy.html">Privacy Policy <span class="arrow">&rarr;</span></a>
-    <a href="support-policy.html">Support <span class="arrow">&rarr;</span></a>
+    <a href="#privacy-policy">Privacy Policy</a>
+    <a href="#support">Support</a>
+    <a href="mailto:support@adamdeanapps.co.uk">Email us</a>
+  </div>
+</div>
+
+<main>
+
+<section id="privacy-policy">
+  <h2 class="section-title">Privacy Policy</h2>
+  <p class="effective-date">Effective date: 27 September 2026</p>
+
+  <h3>Who we are</h3>
+  <p>Plana ("we", "us", "our") is an event-planning app that helps you organise weddings, parties and other events — budgets, guest lists, payments, timelines and seating plans. Adam White is the developer and data controller responsible for the personal data Plana collects.</p>
+
+  <h3>What we collect</h3>
+  <p><strong>Account data:</strong> your email address (required, used to sign in) and, if you choose to add them, your name and age (both optional — age is never required to use the app).</p>
+  <p><strong>Event data you create:</strong> event names, dates, budgets, payment records, to-do items, timelines and seating tables — anything you type into the app while planning an event.</p>
+  <p><strong>Guest data you add about other people:</strong> names, meal choices and dietary notes for guests you invite to an event. This is personal data about someone other than you, entered on their behalf — see "Data about your guests" below.</p>
+  <p>We do not collect location data, contacts, or photos, and we don't use any analytics or tracking tools beyond the advertising described below.</p>
+
+  <h3>How we use it</h3>
+  <p>To create and secure your account, store your events so they sync across your devices, let collaborators you invite see and edit a shared event, send payment and task-due reminders (push and on-device notifications), generate PDF summaries of your event when you export one, and show ads (see "Advertising" below). We do not sell your data to anyone.</p>
+
+  <h3>Who we share it with</h3>
+  <p>Your account and event data is stored and processed by Google Firebase (Firebase Authentication, Cloud Firestore, Firebase Cloud Messaging and Cloud Functions), which acts as our data processor on Google Cloud infrastructure. Ads are served by Google AdMob — see "Advertising" below for what that involves. We don't share your account or event data with any other third party. If you invite a collaborator to an event, they can see the data on that event, including any guest details you've added.</p>
+
+  <h3>Advertising</h3>
+  <p>Plana is free to use and shows ads, served by Google AdMob, to help cover the cost of running the app. When you open the app, AdMob may use device identifiers (such as your device's advertising ID, or IDFA on iOS) to show relevant ads, if you've consented to this — on first launch, and periodically afterwards, you'll be asked to choose your ad privacy preferences. You can change this choice at any time in Settings &gt; Ads &amp; Privacy (shown where required). If you don't consent, or where consent isn't required to ask for, you'll still see ads, just less tailored to you. On iOS, Apple's own "App Tracking Transparency" prompt may also appear as part of this — declining it doesn't stop ads showing, it just means your device's advertising ID isn't used. Google's own privacy policy covers how it handles this data: <a class="inline" href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</p>
+
+  <h3>Data about your guests</h3>
+  <p>When you add a guest's name, meal choice or dietary notes, you are entering personal data about someone else. Please only add guest details with their knowledge, and let them know they can ask you to update or remove their information at any time — you can edit or delete it directly in the app.</p>
+
+  <h3>How long we keep it</h3>
+  <p>We keep your data for as long as your account exists. If you delete your account (Settings &gt; Account details &gt; Delete account), your profile and every event, guest, payment and timeline entry linked to it are permanently deleted.</p>
+
+  <h3>Your rights</h3>
+  <p>You can view and correct your name, email and age at any time in Settings &gt; Account details. You can request a copy of your data or ask us to delete it by contacting us below, and you can delete your account and all its data yourself, in-app, whenever you like. If you're in the UK or EU, you also have the right to complain to your local data protection authority (the ICO in the UK) if you think we've mishandled your data.</p>
+
+  <h3>Security</h3>
+  <p>Your data is encrypted in transit and at rest by Firebase's infrastructure, and access to it is restricted by database security rules so that only you (and anyone you've explicitly added as a collaborator) can read or write your events.</p>
+
+  <h3>Children</h3>
+  <p>Plana isn't directed at children, and we ask that you don't use it if you're under 16.</p>
+
+  <h3>Changes to this policy</h3>
+  <p>If we make significant changes to this policy, we'll update the effective date above and let you know in the app.</p>
+
+  <h3>Contact us</h3>
+  <p>Questions about this policy or your data? Email us at <a class="inline" href="mailto:support@adamdeanapps.co.uk">support@adamdeanapps.co.uk</a>.</p>
+
+  <a class="back-to-top" href="#top">&uarr; Back to top</a>
+</section>
+
+<section id="support">
+  <h2 class="section-title">Support</h2>
+  <p class="effective-date">Need a hand with Plana, found a bug, or have an idea for a feature? We'd love to hear from you.</p>
+
+  <div class="contact-card">
+    <h3>Email us directly</h3>
+    <a class="big" href="mailto:support@adamdeanapps.co.uk">support@adamdeanapps.co.uk</a>
+    <p>We aim to reply within 2 business days. Please include your device (e.g. iPhone 16, iPadOS 26) and a quick description of what happened.</p>
   </div>
 
-  <footer>
-    &copy; 2026 Adam White &middot; <a href="mailto:support@adamdeanapps.co.uk">support@adamdeanapps.co.uk</a>
-  </footer>
-</div>
+  <h3>Frequently asked questions</h3>
+
+  <div class="faq">
+    <h4>I can't sign in / I forgot my password</h4>
+    <p>On the Sign In screen, tap "Forgotten password" and enter your email — we'll send a reset link. If you signed up with Apple or Google, use that same button to sign back in rather than a password.</p>
+  </div>
+
+  <div class="faq">
+    <h4>I'm not getting reminder notifications</h4>
+    <p>Check Settings &gt; Notifications inside Plana first, then check your device's system notification settings for Plana are turned on. Reminders are scheduled per due date, so an item without a due date won't send one.</p>
+  </div>
+
+  <div class="faq">
+    <h4>How do I share an event with someone else (my partner, planner, etc.)?</h4>
+    <p>Open the event, go to Collaborators, and add them by email. They'll be able to see and edit that event once they sign in with the same email address (verified). They won't be able to remove other collaborators or delete the event — only the owner can do that.</p>
+  </div>
+
+  <div class="faq">
+    <h4>How do I delete my account and data?</h4>
+    <p>Go to Settings &gt; Account details &gt; Delete account. This permanently removes your profile and every event, guest, payment and timeline entry linked to it — there's no way to undo this, so export a PDF first if you want to keep a copy.</p>
+  </div>
+
+  <div class="faq">
+    <h4>Why am I seeing ads?</h4>
+    <p>Plana is free to use and ad-supported. You can change your ad privacy preferences any time in Settings &gt; Ads &amp; Privacy. See the <a class="inline" href="#privacy-policy">Privacy Policy</a> above for details on how ads work.</p>
+  </div>
+
+  <div class="faq">
+    <h4>I found a bug, or something looks wrong</h4>
+    <p>Email us at the address above with what you were doing, what you expected, and what happened instead — a screenshot helps a lot. We read every message.</p>
+  </div>
+
+  <div class="faq">
+    <h4>Can I request a feature?</h4>
+    <p>Absolutely — email us your idea. We can't promise everything makes it in, but we read every suggestion.</p>
+  </div>
+
+  <a class="back-to-top" href="#top">&uarr; Back to top</a>
+</section>
+
+</main>
+
+<footer>
+  Plana &middot; <a href="mailto:support@adamdeanapps.co.uk">support@adamdeanapps.co.uk</a> &middot; &copy; 2026 Adam White
+</footer>
 
 </body>
 </html>
